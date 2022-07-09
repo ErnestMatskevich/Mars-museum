@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="rover_name" content="Spirit" />
+    <title>API</title>
+</head>
+<body>
+
+
+<ul id="result"></ul>
+
+<script>
+
+    var input = document.getElementsByName('rover_name')[0].getAttribute('content')+"_(rover)";
+    var result = document.getElementById('result');
+
+    const getRandomLinks = () => {
+        const value = input;
+        result.innerHTML = "";
+        fetch('https://en.wikipedia.org/w/api.php?format=json&action=query&generator=prefixsearch&prop=extracts&exlimit=10&exintro&explaintext&gpslimit=10&gpssearch=' + value + '&origin=*', {
+            method: 'GET'
+        }).then(response => response.json()).then(data => {
+
+            Object.keys(data.query.pages).map(function(key) {
+                const {
+                    title,
+                    extract
+                } = data.query.pages[key];
+
+
+                const li = document.createElement('li');
+                const text = li.textContent;
+                li.textContent = '';
+                const a = document.createElement('a');
+
+                a.setAttribute('target', '_blank');
+
+                a.innerHTML = `${extract}`;
+
+
+                li.appendChild(a);
+
+                console.log(data.query.pages);
+
+                result.appendChild(li);
+
+
+
+
+            });
+        })
+
+
+    }
+
+    getRandomLinks();
+
+</script>
+
+</body>
+</html>

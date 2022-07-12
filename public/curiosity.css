@@ -1,0 +1,106 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.gifer.com/4MES.gif');
+    background-size: cover;
+    height: 100px;
+   opacity: 95%;
+}
+
+#selector {
+    width: 1200px;
+    height:3000px;
+    align-content:initial;
+}
+
+.my-class {
+    margin: 10px 0;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border-right: 400px;
+}
+
+.text{
+    margin-left: 100px;
+    margin-right: 850px;
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    backdrop-filter: blur(5px);
+}
+
+.image{
+    margin-left: 700px;
+    margin-right: 50px;
+
+}
+
+h1{
+    margin: 10px 0;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border-right: 400px;
+}
+
+.description{
+    font-size: 16px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    backdrop-filter: blur(5px);
+}
+
+
+a.iotd_link button{
+    display: inline-block;
+  opacity: 95%;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-radius: 6px;
+  transition: 0.2s;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,0);
+  color: aliceblue;
+  font-size: 18px;
+}
+
+a.iotd_link button:hover{
+    background: rgb(255, 255, 255); 
+    color: rgb(33, 47, 71);
+    font-weight: bold;
+}
+
+a.iotd_link button:active{
+    background: rgb(40, 47, 100);
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+ul {
+    padding-left: 0; /* Сдвигаем список влево */
+}
